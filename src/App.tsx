@@ -1,14 +1,15 @@
 import './App.less';
 import { useEffect, useState } from 'react';
 import logo from './ghost.jfif';
+import { Quote } from './Quote';
 
 function App() {
-  const [message, setMessage] = useState({});
+  const [message, setMessage] = useState({} as Quote);
 
   useEffect(() => {
     fetch('https://programming-quotesapi.vercel.app/api/random')
     .then(response => response.json())
-    .then(data => setMessage(data));
+    .then((data: Quote) => setMessage(data));
   }, []);
 
   return (
