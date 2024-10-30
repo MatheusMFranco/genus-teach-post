@@ -1,0 +1,83 @@
+@import './variables.less';
+
+.quote {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  padding: 0 2rem;
+
+  .quote-media {
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(@black, 0) 35%,
+        @black 75%,
+        @black 100%
+      );
+    }
+  }
+
+  .quote-picture {
+    border-radius: 50%;
+    display: block;
+    height: 40vmin;
+    pointer-events: none;
+    
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .quote-box {
+    font-family: Georgia, serif;
+  }
+
+  .quote-message {
+    text-align: center;
+    @media (max-width: 900px) {
+      font-size: 13pt;
+    }  
+
+    &:before {
+      content: "“";
+    }
+
+    &:after {
+      content: "”";
+    }
+  }
+
+  .quote-author {
+    display: block;
+    text-align: right;
+
+    &:before {
+      content: "- ";
+    }
+  }
+}
+
+.light{
+  .quote-media:after {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(@white, 0) 35%,
+      @white 75%,
+      @white 100%
+    );
+  }
+}
