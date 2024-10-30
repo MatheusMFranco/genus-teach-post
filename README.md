@@ -1,10 +1,10 @@
 # Genus Teach Post
 
-A simple React application built with TypeScript that generates random stoic quotes to inspire reflection and calmness.
+A simple React application built with TypeScript that generates random programming quotes to inspire reflection and calmness.
 
 ## Features
 
-- Displays random stoic quotes;
+- Displays random programming quotes;
 - Built with React and TypeScript for a type-safe, efficient, and reactive experience;
 - Responsive and user-friendly design for mobile and desktop.
 
