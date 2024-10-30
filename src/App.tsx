@@ -1,27 +1,30 @@
-import './App.less';
 import { useEffect, useState } from 'react';
-import logo from './ghost.jfif';
-import { Quote } from './Quote';
+
+import styles from './App.module.less';
+import logo from './medias/ghost.jfif';
+
+import { Quote } from './models/Quote';
+import { useFullScreen } from './utils/useFullScreen';
+import { fetchRandomQuote } from './services/quoteService';
 
 function App() {
   const [message, setMessage] = useState({} as Quote);
+  const { toggleFullScreen } = useFullScreen();
 
   useEffect(() => {
-    fetch('https://programming-quotesapi.vercel.app/api/random')
-    .then(response => response.json())
-    .then((data: Quote) => setMessage(data));
+    fetchRandomQuote().then(setMessage);
   }, []);
 
   return (
-    <article className="quote">
-      <div className="quote-media">
-        <img src={logo} className="quote-picture" alt="Zeitgeist" />
+    <article className={styles.quote} onClick={toggleFullScreen}>
+      <div className={styles['quote-media']}>
+        <img src={logo} className={styles['quote-picture']} alt="Zeitgeist" />
       </div>
-      <blockquote className="quote-box">
-        <h1 className="quote-message">
+      <blockquote className={styles['quote-box']}>
+        <h1 className={styles['quote-message']}>
           {message.quote || '...'}
         </h1>
-        <cite className="quote-author">
+        <cite className={styles['quote-author']}>
           {message.author || 'Unknown'}
         </cite>
       </blockquote>
