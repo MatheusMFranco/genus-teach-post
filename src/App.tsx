@@ -6,6 +6,8 @@ import logo from './medias/ghost.jfif';
 import { Quote } from './models/Quote';
 import { useFullScreen } from './utils/useFullScreen';
 import { useWakeLock } from './utils/useWakeLock';
+import { useAutoRefresh } from './utils/useAutoRefresh';
+
 import { fetchAlternativeQuote, fetchRandomQuote } from './services/quoteService';
 
 function App() {
@@ -17,7 +19,9 @@ function App() {
       .then(setMessage)
       .catch(() => fetchAlternativeQuote().then(setMessage));
   }, []);
+
   useWakeLock();
+  useAutoRefresh(10);
 
   return (
     <article className={styles.quote} onClick={toggleFullScreen}>
