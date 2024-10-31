@@ -1,24 +1,14 @@
-import { useEffect, useState } from 'react';
-
 import styles from './App.module.less';
 import logo from './medias/ghost.jfif';
 
-import { Quote } from './models/Quote';
-import { useFullScreen } from './utils/useFullScreen';
-import { useWakeLock } from './utils/useWakeLock';
-import { useAutoRefresh } from './utils/useAutoRefresh';
-
-import { fetchAlternativeQuote, fetchRandomQuote } from './services/quoteService';
+import { useFullScreen } from './hooks/useFullScreen';
+import { useWakeLock } from './hooks/useWakeLock';
+import { useAutoRefresh } from './hooks/useAutoRefresh';
+import { useQuote } from './hooks/useQuote';
 
 function App() {
-  const [message, setMessage] = useState({} as Quote);
+  const message = useQuote();
   const { toggleFullScreen } = useFullScreen();
-  
-  useEffect(() => {
-    fetchRandomQuote()
-      .then(setMessage)
-      .catch(() => fetchAlternativeQuote().then(setMessage));
-  }, []);
 
   useWakeLock();
   useAutoRefresh(10);
