@@ -9,10 +9,10 @@ A simple React application built with TypeScript that generates random programmi
 
 ## Preview 
 ### Mobile
-![Desktop](/prints/mobile.png)
+<img src="/prints/mobile.png" height="300" />
 
 ### Desktop
-![Desktop](/prints/desktop.png)
+<img src="/prints/desktop.png" height="200" />
 
 ## Features
 
