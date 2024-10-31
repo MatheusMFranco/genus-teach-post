@@ -20,10 +20,22 @@ A simple React application built with TypeScript that generates random programmi
 npm install
 ```
 
+or
+
+```bash
+docker build -t genus-teach-post .
+```
+
 ## Usage
 
 To start the application, run:
 
 ```bash
 npm start
+```
+
+or
+
+```bash
+docker run -d -p 3000:80 genus-teach-post
 ```
