@@ -22,21 +22,22 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: radial-gradient(
-        ellipse at center,
-        rgba(@black, 0) 35%,
-        @black 75%,
-        @black 100%
-      );
+      background: radial-gradient(ellipse at center,
+          rgba(@black, 0) 35%,
+          @black 75%,
+          @black 100%);
     }
   }
 
   .quote-picture {
     border-radius: 50%;
     display: block;
+    width: 40vmin;
     height: 40vmin;
     pointer-events: none;
-    
+    object-fit: cover;
+    filter: grayscale(1);
+
     @media (max-width: 600px) {
       display: none;
     }
@@ -49,9 +50,10 @@
 
   .quote-message {
     text-align: center;
+
     @media (max-width: 900px) {
       font-size: 13pt;
-    }  
+    }
 
     &:before {
       content: "“";
@@ -72,13 +74,11 @@
   }
 }
 
-.light{
+.light {
   .quote-media:after {
-    background: radial-gradient(
-      ellipse at center,
-      rgba(@white, 0) 35%,
-      @white 75%,
-      @white 100%
-    );
+    background: radial-gradient(ellipse at center,
+        rgba(@white, 0) 35%,
+        @white 75%,
+        @white 100%);
   }
 }
