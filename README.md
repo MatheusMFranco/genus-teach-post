@@ -3,9 +3,9 @@
 # Genus Teach Post
 ![GitHub Tag](https://img.shields.io/github/v/tag/matheusmfranco/genus-teach-post) ![](https://img.shields.io/badge/Framework-react-brightgreen) [![Basic validation](https://github.com/actions/labeler/actions/workflows/basic-validation.yml/badge.svg?branch=main)](https://github.com/actions/labeler/actions/workflows/basic-validation.yml)
 
-</div>
-
 A simple React application built with TypeScript that generates random programming quotes to inspire reflection and calmness.
+
+</div>
 
 ## Preview 
 ### Mobile
@@ -43,3 +43,9 @@ docker run -p 3000:80 matheusmagal/genus-teach-post
 ```bash
 npx json-server --watch db.json --port 4000
 ```
+And in another terminal:
+```bash
+npm run start:dev
+```
+
+![Phantom](https://64.media.tumblr.com/77972cf8d91bfd75e520f637f9795098/tumblr_n8qf1jYwcs1r0j0yso1_400.gif)
