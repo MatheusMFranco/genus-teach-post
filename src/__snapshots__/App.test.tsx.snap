@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders App component correctly 1`] = `
+<DocumentFragment>
+  <article>
+    <div>
+      <img
+        alt="Zeitgeist"
+        src="ghost.jfif"
+      />
+    </div>
+    <blockquote>
+      <h1>
+        ...
+      </h1>
+      <cite>
+        Unknown
+      </cite>
+    </blockquote>
+  </article>
+</DocumentFragment>
+`;

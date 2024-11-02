@@ -1,4 +1,4 @@
-import { Quote } from '../models/Quote';
+import { Quote } from '../../models/Quote';
 
 export const fetchAlternativeQuote = async (): Promise<Quote> => {
     const api = process.env.REACT_APP_ALTERNATIVE_API;

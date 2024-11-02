@@ -4,6 +4,7 @@ export const useFullScreen = () => {
     const [isFullScreen, setIsFullScreen] = useState(false);
 
     const toggleFullScreen = useCallback(() => {
+        /* istanbul ignore else */
         if (!isFullScreen) {
             document.documentElement.requestFullscreen();
         } else if (document.fullscreenElement) {
@@ -12,5 +13,5 @@ export const useFullScreen = () => {
         setIsFullScreen(!isFullScreen);
     }, [isFullScreen]);
 
-    return { toggleFullScreen };
+    return { toggleFullScreen, isFullScreen };
 };
