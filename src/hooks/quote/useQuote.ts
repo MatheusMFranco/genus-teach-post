@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import { Quote } from '../models/Quote';
-import { fetchRandomQuote } from '../services/randomService';
-import { fetchAlternativeQuote } from '../services/alternativeService';
+import { Quote } from '../../models/Quote';
+import { fetchRandomQuote } from '../../services/random/randomService';
+import { fetchAlternativeQuote } from '../../services/alternative/alternativeService';
 
 export const useQuote = () => {
     const [message, setMessage] = useState({} as Quote);
