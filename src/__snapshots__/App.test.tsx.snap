@@ -2,18 +2,29 @@
 
 exports[`<App /> renders App component correctly 1`] = `
 <DocumentFragment>
-  <article>
-    <div>
+  <article
+    class="quote"
+  >
+    <div
+      class="quote-media"
+    >
       <img
         alt="Zeitgeist"
+        class="quote-picture"
         src="ghost.jfif"
       />
     </div>
-    <blockquote>
-      <h1>
+    <blockquote
+      class="quote-box"
+    >
+      <h1
+        class="quote-message"
+      >
         ...
       </h1>
-      <cite>
+      <cite
+        class="quote-author"
+      >
         Unknown
       </cite>
     </blockquote>
