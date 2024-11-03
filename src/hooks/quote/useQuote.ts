@@ -25,7 +25,6 @@ export const useQuote = () => {
             }
         };
         fetchQuote();
-// Stryker disable next-line all
     }, []);
 
     return message;
