@@ -1,4 +1,4 @@
-import styles from './App.module.less';
+import './App.less';
 import logo from './medias/ghost.jfif';
 
 import { useFullScreen } from './hooks/full-screen/useFullScreen';
@@ -14,15 +14,15 @@ function App() {
   useAutoRefresh(10);
 
   return (
-    <article className={styles.quote} onClick={toggleFullScreen}>
-      <div className={styles['quote-media']}>
-        <img src={logo} className={styles['quote-picture']} alt="Zeitgeist" />
+    <article className="quote" onClick={toggleFullScreen}>
+      <div className="quote-media">
+        <img src={logo} className="quote-picture" alt="Zeitgeist" />
       </div>
-      <blockquote className={styles['quote-box']}>
-        <h1 className={styles['quote-message']}>
+      <blockquote className="quote-box">
+        <h1 className="quote-message">
           {message?.quote || '...'}
         </h1>
-        <cite className={styles['quote-author']}>
+        <cite className="quote-author">
           {message?.author || 'Unknown'}
         </cite>
       </blockquote>

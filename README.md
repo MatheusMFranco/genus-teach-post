@@ -3,7 +3,7 @@
 # Genus Teach Post
 ![GitHub Tag](https://img.shields.io/github/v/tag/matheusmfranco/genus-teach-post) ![](https://img.shields.io/badge/Framework-react-brightgreen) [![Basic validation](https://github.com/actions/labeler/actions/workflows/basic-validation.yml/badge.svg?branch=main)](https://github.com/actions/labeler/actions/workflows/basic-validation.yml)
 
-A simple React application built with TypeScript that generates random programming quotes to inspire reflection and calmness.
+A simple React application built with TypeScript that generates random programming quotes.
 
 </div>
 
@@ -47,5 +47,14 @@ And in another terminal:
 ```bash
 npm run start:dev
 ```
+
+## Run Tests
+```bash
+npm test -- --coverage   
+```
+```bash
+npx stryker run
+```
+
 
 ![Phantom](https://64.media.tumblr.com/77972cf8d91bfd75e520f637f9795098/tumblr_n8qf1jYwcs1r0j0yso1_400.gif)
