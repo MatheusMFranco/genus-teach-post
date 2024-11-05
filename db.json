@@ -1,10 +1,12 @@
 {
-    "alternative": [{
-        "quote": "Drugs are bad, mmkay?",
-        "character": "Mr. Mackey"
-    }],
-    "random": {
-        "quote": "You either die a hero or you live long enough to see yourself become the villain.",
-        "author": "Harvey Dent"
+  "alternative": [
+    {
+      "quote": "Drugs are bad, mmkay?",
+      "character": "Mr. Mackey"
     }
+  ],
+  "random": {
+    "quote": "You either die a hero or you live long enough to see yourself become the villain.",
+    "author": "Harvey Dent"
+  }
 }

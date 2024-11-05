@@ -1,10 +1,6 @@
 module.exports = {
   $schema: './node_modules/@stryker-mutator/core/schema/stryker-schema.json',
-  mutate: [
-    'src/**/*.ts?(x)',
-    '!src/**/*.test.ts?(x)',
-    '!src/index.tsx',
-  ],
+  mutate: ['src/**/*.ts?(x)', '!src/**/*.test.ts?(x)', '!src/index.tsx'],
   mutator: {
     excludedMutations: ['ArrayDeclaration'], //React useEffect issue
   },

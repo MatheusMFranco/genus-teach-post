@@ -1,17 +1,21 @@
 <div align="center">
 
 # Genus Teach Post
+
 ![GitHub Tag](https://img.shields.io/github/v/tag/matheusmfranco/genus-teach-post) ![](https://img.shields.io/badge/Framework-react-brightgreen) [![Basic validation](https://github.com/actions/labeler/actions/workflows/basic-validation.yml/badge.svg?branch=main)](https://github.com/actions/labeler/actions/workflows/basic-validation.yml)
 
 A simple React application built with TypeScript that generates random programming quotes.
 
 </div>
 
-## Preview 
+## Preview
+
 ### Mobile
+
 <img src="/prints/mobile.png" height="300" />
 
 ### Desktop
+
 <img src="/prints/desktop.png" height="200" />
 
 ## Features
@@ -42,25 +46,33 @@ docker run -p 3000:80 matheusmagal/genus-teach-post
 ```
 
 ## Run Mock
+
 ```bash
 npx json-server --watch db.json --port 4000
 ```
+
 And in another terminal:
+
 ```bash
 npm run start:dev
 ```
 
 ## Run Tests
+
 ### Unit
+
 ```bash
-npm test -- --coverage   
+npm test -- --coverage
 ```
+
 ### Mutation
+
 ```bash
 npx stryker run
 ```
 
 ### E2E
+
 To see the E2E with Cypress, access [this repo](https://github.com/MatheusMFranco/spreadReport).
 
 ![Phantom](https://64.media.tumblr.com/77972cf8d91bfd75e520f637f9795098/tumblr_n8qf1jYwcs1r0j0yso1_400.gif)
