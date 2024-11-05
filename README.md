@@ -24,7 +24,9 @@ A simple React application built with TypeScript that generates random programmi
 
 - **React**: JavaScript library for building user interfaces;
 - **TypeScript**: Type-safe JavaScript with enhanced productivity and readability;
-- **LESS**: CSS pre-processor styling for an appealing design.
+- **LESS**: CSS pre-processor styling for an appealing design;
+- **Jest**: Framework that enables the creation of unit tests;
+- **Stryker**: Mutation testing tool that helps improve code quality.
 
 ## Local
 
@@ -49,12 +51,16 @@ npm run start:dev
 ```
 
 ## Run Tests
+### Unit
 ```bash
 npm test -- --coverage   
 ```
+### Mutation
 ```bash
 npx stryker run
 ```
 
+### E2E
+To see the E2E with Cypress, access [this repo](https://github.com/MatheusMFranco/spreadReport).
 
 ![Phantom](https://64.media.tumblr.com/77972cf8d91bfd75e520f637f9795098/tumblr_n8qf1jYwcs1r0j0yso1_400.gif)

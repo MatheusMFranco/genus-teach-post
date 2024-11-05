@@ -1,20 +1,20 @@
 import { Quote } from '../../models/Quote';
 
 export const fetchAlternativeQuote = async (): Promise<Quote> => {
-    const api = process.env.REACT_APP_ALTERNATIVE_API;
-    const response = await fetch(`${api}`);
+  const api = process.env.REACT_APP_ALTERNATIVE_API;
+  const response = await fetch(`${api}`);
 
-    if (response.ok) {
-        const [data] = await response.json();
-        const {quote, character} = data;
-        return {
-            quote,
-            author: character,
-        };
-    }
-
+  if (response.ok) {
+    const [data] = await response.json();
+    const { quote, character } = data;
     return {
-        quote: 'Mmmm mmmm mmmm mm!!!',
-        author: 'Kenny',
+      quote,
+      author: character,
     };
+  }
+
+  return {
+    quote: 'Mmmm mmmm mmmm mm!!!',
+    author: 'Kenny',
+  };
 };

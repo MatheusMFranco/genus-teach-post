@@ -14,17 +14,18 @@ jest.mock('./hooks/auto-refresh/useAutoRefresh');
 jest.mock('./hooks/quote/useQuote');
 
 describe('<App />', () => {
-
   Object.defineProperty(navigator, 'wakeLock', {
     value: {
       request: jest.fn().mockResolvedValue({
         release: jest.fn(),
       }),
     },
-  });  
+  });
 
   beforeEach(() => {
-    (useFullScreen as jest.Mock).mockReturnValue({ toggleFullScreen: jest.fn() });
+    (useFullScreen as jest.Mock).mockReturnValue({
+      toggleFullScreen: jest.fn(),
+    });
     (useWakeLock as jest.Mock).mockImplementation(() => {}); // Mock sem funcionalidade
     (useAutoRefresh as jest.Mock).mockImplementation(() => {}); // Mock sem funcionalidade
   });

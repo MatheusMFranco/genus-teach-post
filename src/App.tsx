@@ -19,12 +19,8 @@ function App() {
         <img src={logo} className="quote-picture" alt="Zeitgeist" />
       </div>
       <blockquote className="quote-box">
-        <h1 className="quote-message">
-          {message?.quote || '...'}
-        </h1>
-        <cite className="quote-author">
-          {message?.author || 'Unknown'}
-        </cite>
+        <h1 className="quote-message">{message?.quote || '...'}</h1>
+        <cite className="quote-author">{message?.author || 'Unknown'}</cite>
       </blockquote>
     </article>
   );
