@@ -1,6 +1,6 @@
 {
   "name": "genus-teach-post",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "dependencies": {
     "react": "^18.3.1",
@@ -12,13 +12,10 @@
     "build": "craco build",
     "mutation": "stryker run",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix"
   },
   "browserslist": {
     "production": [
@@ -35,6 +32,8 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@craco/craco": "^7.1.0",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.11.1",
     "@stryker-mutator/core": "^8.6.0",
     "@stryker-mutator/jest-runner": "^8.6.0",
     "@stryker-mutator/typescript-checker": "^8.6.0",
@@ -45,8 +44,14 @@
     "@types/node": "^22.8.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "craco-less": "^3.0.1",
     "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5"
   },
