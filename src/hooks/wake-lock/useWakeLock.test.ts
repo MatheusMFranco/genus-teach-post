@@ -12,7 +12,7 @@ describe('useWakeLock', () => {
     (window.navigator as any).wakeLock = {
       request: jest.fn().mockResolvedValue(mockWakeLock),
     };
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => ({}));
   });
 
   afterEach(() => jest.clearAllMocks());

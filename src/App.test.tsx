@@ -26,8 +26,8 @@ describe('<App />', () => {
     (useFullScreen as jest.Mock).mockReturnValue({
       toggleFullScreen: jest.fn(),
     });
-    (useWakeLock as jest.Mock).mockImplementation(() => {}); // Mock sem funcionalidade
-    (useAutoRefresh as jest.Mock).mockImplementation(() => {}); // Mock sem funcionalidade
+    (useWakeLock as jest.Mock).mockImplementation(() => ({}));
+    (useAutoRefresh as jest.Mock).mockImplementation(() => ({}));
   });
 
   it('should render', () => {

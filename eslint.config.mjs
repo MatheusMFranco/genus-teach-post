@@ -33,6 +33,7 @@ export default [
 
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
       'no-unused-vars': 'off',
       'no-undef': 'off',
       '@typescript-eslint/no-require-imports': 'off',

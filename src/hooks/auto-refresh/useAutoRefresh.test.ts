@@ -9,7 +9,7 @@ describe('useAutoRefresh', () => {
   });
 
   afterEach(() => jest.clearAllMocks());
-  afterAll(() => ((window as any).location = { reload: () => {} }));
+  afterAll(() => ((window as any).location = { reload: () => ({}) }));
 
   it('should set an interval to refresh the page', () => {
     const interval = 1;
