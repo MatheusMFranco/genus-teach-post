@@ -30,7 +30,9 @@ A simple React application built with TypeScript that generates random programmi
 - **TypeScript**: Type-safe JavaScript with enhanced productivity and readability;
 - **LESS**: CSS pre-processor styling for an appealing design;
 - **Jest**: Framework that enables the creation of unit tests;
-- **Stryker**: Mutation testing tool that helps improve code quality.
+- **Stryker**: Mutation testing tool that helps improve code quality;
+- **Prettier**: Code formatter that enforces consistent style for readability and simplicity;
+- **ESLint**: Linting tool that identifies and fixes potential errors and code quality issues.
 
 ## Local
 
@@ -74,5 +76,15 @@ npx stryker run
 ### E2E
 
 To see the E2E with Cypress, access [this repo](https://github.com/MatheusMFranco/spreadReport).
+
+## Run Lint
+### ESLint
+```bash
+npm run fix
+```
+### Prettier
+```bash
+npm run format
+```
 
 ![Phantom](https://64.media.tumblr.com/77972cf8d91bfd75e520f637f9795098/tumblr_n8qf1jYwcs1r0j0yso1_400.gif)
