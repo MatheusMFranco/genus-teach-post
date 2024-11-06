@@ -17,6 +17,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Installing Dependencies
+        run: yarn install
+
+      - name: Testing Running
+        run: yarn test --coverage
+
+      - name: Upload Coverage Reports to CodeCov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: MatheusMFranco/genus-teach-post
+
       - name: Log in to GitHub Package Registry
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -42,9 +54,4 @@ jobs:
           git push origin "v$VERSION"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Upload Coverage Reports to CodeCov
-        uses: codecov/codecov-action@v4.0.1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          slug: MatheusMFranco/genus-teach-post
+
