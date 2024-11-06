@@ -17,11 +17,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Installing Dependencies
-        run: yarn install
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+          registry-url: 'https://registry.npmjs.org/'
 
-      - name: Testing Running
-        run: yarn test --coverage
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Run mutation tests
+        run: npm run mutation
 
       - name: Upload Coverage Reports to CodeCov
         uses: codecov/codecov-action@v4.0.1

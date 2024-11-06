@@ -1,6 +1,6 @@
 {
   "name": "genus-teach-post",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": true,
   "dependencies": {
     "react": "^18.3.1",
