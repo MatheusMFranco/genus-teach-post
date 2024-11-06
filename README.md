@@ -2,9 +2,10 @@
 
 # Genus Teach Post
 
-![GitHub Tag](https://img.shields.io/github/v/tag/matheusmfranco/genus-teach-post) ![](https://img.shields.io/badge/Framework-react-brightgreen) [![Basic validation](https://github.com/actions/labeler/actions/workflows/basic-validation.yml/badge.svg?branch=main)](https://github.com/actions/labeler/actions/workflows/basic-validation.yml)
+![GitHub Tag](https://img.shields.io/github/v/tag/matheusmfranco/genus-teach-post) ![React](https://img.shields.io/badge/Framework-reactTS-brightgreen) ![Codecov](https://img.shields.io/codecov/c/github/matheusmfranco/genus-teach-post)
 
-A simple React application built with TypeScript that generates random programming quotes.
+
+Web application built that generates random programming quotes.
 
 </div>
 
@@ -26,7 +27,7 @@ A simple React application built with TypeScript that generates random programmi
 
 ## Technologies
 
-- **React**: JavaScript library for building user interfaces;
+- **React (CRA)**: JavaScript library for building user interfaces;
 - **TypeScript**: Type-safe JavaScript with enhanced productivity and readability;
 - **LESS**: CSS pre-processor styling for an appealing design;
 - **Jest**: Framework that enables the creation of unit tests;
