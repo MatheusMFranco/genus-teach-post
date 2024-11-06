@@ -1,0 +1,8 @@
+ignore:
+	- "src/index.tsx"
+
+coverage:
+	status:
+		patch:
+			default:
+				target: 80%
