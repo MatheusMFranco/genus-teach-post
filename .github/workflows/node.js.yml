@@ -15,13 +15,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          registry-url: 'https://registry.npmjs.org/'
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -29,17 +28,20 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Run unit tests
-        run: npm test
-
       - name: Run mutation tests
         run: npm run mutation
 
+      - name: Run unit tests
+        run: npm test -- --coverage
+
       - name: Upload Coverage Reports to CodeCov
-        uses: codecov/codecov-action@v4.0.1
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: MatheusMFranco/genus-teach-post
+          files: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-coverage
+          fail_ci_if_error: true
 
       - name: Log in to GitHub Package Registry
         env:
