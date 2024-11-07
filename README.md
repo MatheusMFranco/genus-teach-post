@@ -33,21 +33,27 @@ Web application built that generates random programming quotes.
 - **Stryker**: Mutation testing tool that helps improve code quality;
 - **Prettier**: Code formatter that enforces consistent style for readability and simplicity;
 - **ESLint**: Linting tool that identifies and fixes potential errors and code quality issues;
-- **standard-version**: Versioning tool that automates semantic versioning and changelog generation;
-- **commitlint**: Tool that enforces standardized commit messages for better readability and changelog consistency;
-- **husky**: Git hooks manager that enhances code quality by enabling pre-commit and pre-push checks.
+- **Standard-version**: Versioning tool that automates semantic versioning and changelog generation;
+- **Commitlint**: Tool that enforces standardized commit messages for better readability and changelog consistency;
+- **Husky**: Git hooks manager that enhances code quality by enabling pre-commit and pre-push checks.
 
 ## Before add something
+
+This project uses husky para automate commits to still in pattern and pushes, so before to add something in this project, please run this command:
 
 ```bash
 npm run prepare
 ```
 
+To know more about how to create a good commit message, [read this documentation](https://www.conventionalcommits.org/en/v1.0.0/).
+
 ## Before commit something
 
+To keep the project with the same code style, please, run these commands and commit the changes:
+
 ```bash
-npm run format
 npm run fix
+npm run format
 ```
 
 ## Run Local
@@ -65,17 +71,21 @@ docker run -p 3000:80 matheusmagal/genus-teach-post
 
 ## Run Mock
 
+By default, the local API is the production one, but if you want run your own json data, update the `db.json` with your data and run this command:
+
 ```bash
 npx json-server --watch db.json --port 4000
 ```
 
-And in another terminal:
+And in another terminal, start the app with this command:
 
 ```bash
 npm run start:dev
 ```
 
 ## Run Tests
+
+All tests, mudatation and unit tests will run before the push, but if you want run them in any case follow these commands:
 
 ### Unit
 
@@ -92,19 +102,5 @@ npx stryker run
 ### E2E
 
 To see the E2E with Cypress, access [this repo](https://github.com/MatheusMFranco/spreadReport).
-
-## Run Lint
-
-### ESLint
-
-```bash
-npm run fix
-```
-
-### Prettier
-
-```bash
-npm run format
-```
 
 ![Phantom](https://64.media.tumblr.com/77972cf8d91bfd75e520f637f9795098/tumblr_n8qf1jYwcs1r0j0yso1_400.gif)
