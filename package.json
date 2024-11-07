@@ -1,6 +1,6 @@
 {
   "name": "genus-teach-post",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "private": true,
   "dependencies": {
     "react": "^18.3.1",
@@ -15,7 +15,8 @@
     "eject": "react-scripts eject",
     "format": "prettier --write .",
     "lint": "prettier --check .",
-    "fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix"
+    "fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "release": "standard-version"
   },
   "browserslist": {
     "production": [
@@ -47,18 +48,26 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.0.0",
     "codecov": "^3.8.2",
+    "commitizen": "^4.3.1",
     "craco-less": "^3.0.1",
     "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.3.3",
     "react-scripts": "5.0.1",
+    "standard-version": "^9.5.0",
     "typescript": "^4.9.5"
   },
   "jest": {
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/models/"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

@@ -2,7 +2,7 @@
 
 # Genus Teach Post
 
-![GitHub Tag](https://img.shields.io/github/v/tag/matheusmfranco/genus-teach-post) ![React](https://img.shields.io/badge/Framework-reactTS-brightgreen) [![codecov](https://codecov.io/gh/MatheusMFranco/genus-teach-post/graph/badge.svg?token=RA5Q307Q8V)](https://codecov.io/gh/MatheusMFranco/genus-teach-post)
+![GitHub Tag](https://img.shields.io/github/v/tag/matheusmfranco/genus-teach-post) ![React](https://img.shields.io/badge/framework-reactTS-brightgreen) [![codecov](https://codecov.io/gh/MatheusMFranco/genus-teach-post/graph/badge.svg?token=RA5Q307Q8V)](https://codecov.io/gh/MatheusMFranco/genus-teach-post)
 
 
 Web application built that generates random programming quotes.
